@@ -392,7 +392,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/基于注册表的poweliks病毒/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -411,7 +411,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/18/WannaMine/" itemprop="url">WannaMine</a></h1>
+                <a class="post-title-link" href="/2019/02/18/基于注册表的poweliks病毒/" itemprop="url">基于注册表的poweliks病毒</a></h1>
         
 
         <div class="post-meta">
@@ -463,12 +463,12 @@
       
         
           
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>C:\Windows\System32\MsraReportDataCache32.tlb<br>C:\Windows\SecureBootThemes\<br>C:\Windows\SecureBootThemes\Microsoft\<br>C:\Windows\SecureBootThemes\Crypt\<br>在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。</li>
-<li>中毒主机对同网段主机有大量445连接。</li>
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。</p>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
+<li>结束进程dllhost.exe</li>
+<li>使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认）</li>
 </ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/164869.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/164869.html</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/169296.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/169296.html</a></p>
 
           
         
@@ -517,7 +517,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine2.0/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/tesst/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -536,7 +536,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/18/WannaMine2.0/" itemprop="url">WannaMine2.0</a></h1>
+                <a class="post-title-link" href="/2019/02/18/tesst/" itemprop="url">基于注册表的poweliks病毒</a></h1>
         
 
         <div class="post-meta">
@@ -588,12 +588,12 @@
       
         
           
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>1.C:\Windows\System32\EnrollCertXaml.dll<br>  C:\Windows\SpeechsTracing\<br>  C:\Windows\SpeechsTracing\Microsoft\<br>  在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。</p>
-<ol start="2">
-<li>中毒主机对同网段主机有大量445连接。</li>
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。</p>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
+<li>结束进程dllhost.exe</li>
+<li>使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认）</li>
 </ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="http://www.sohu.com/a/231033783_99990767" target="_blank" rel="noopener">http://www.sohu.com/a/231033783_99990767</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/169296.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/169296.html</a></p>
 
           
         
@@ -767,6 +767,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SF安服团队">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WuKung病毒处置方法">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/18/WannaMine/" itemprop="url">WannaMine</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T02:08:41+08:00">
+                2019-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
+<li>C:\Windows\System32\MsraReportDataCache32.tlb<br>C:\Windows\SecureBootThemes\<br>C:\Windows\SecureBootThemes\Microsoft\<br>C:\Windows\SecureBootThemes\Crypt\<br>在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。</li>
+<li>中毒主机对同网段主机有大量445连接。</li>
+</ol>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/164869.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/164869.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/Wmixml挖矿病毒/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -889,7 +1014,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/基于注册表的poweliks病毒/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine2.0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -908,7 +1033,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/18/基于注册表的poweliks病毒/" itemprop="url">基于注册表的poweliks病毒</a></h1>
+                <a class="post-title-link" href="/2019/02/18/WannaMine2.0/" itemprop="url">WannaMine2.0</a></h1>
         
 
         <div class="post-meta">
@@ -960,12 +1085,12 @@
       
         
           
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。</p>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>结束进程dllhost.exe</li>
-<li>使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认）</li>
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>1.C:\Windows\System32\EnrollCertXaml.dll<br>  C:\Windows\SpeechsTracing\<br>  C:\Windows\SpeechsTracing\Microsoft\<br>  在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。</p>
+<ol start="2">
+<li>中毒主机对同网段主机有大量445连接。</li>
 </ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/169296.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/169296.html</a></p>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="http://www.sohu.com/a/231033783_99990767" target="_blank" rel="noopener">http://www.sohu.com/a/231033783_99990767</a></p>
 
           
         
@@ -1315,7 +1440,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
