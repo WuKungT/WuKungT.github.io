@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2019%2F02%2F19%2Ftest%2F</url>
-    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
+    <title><![CDATA[PowerGhost]]></title>
+    <url>%2F2019%2F02%2F22%2FPowerGhost%2F</url>
+    <content type="text"><![CDATA[病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。 使用autoruns工具，选择wmi选项卡，删除掉以下两项 C:\Program Files\Windows Photo\Imaging.exe C:\Program Files\Windows Photo\Sadats.dll 使用了第三方安全设备的用户，也可以通过封堵以下两个URL，进行防护：http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。 病毒详情https://www.freebuf.com/articles/terminal/176936.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
-    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
-    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
+    <title><![CDATA[挖矿病毒BearMiner]]></title>
+    <url>%2F2019%2F02%2F20%2F%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92BearMiner%2F</url>
+    <content type="text"><![CDATA[病毒现象 服务器存在卡顿现象。 Setring.exe运行了多个线程进行挖矿，监测到CPU占有率达到75%。 Setring.exe挖矿文件被释放在C:\Program Files (x86)\Microsoft MSBuild\Setring.exe，特意伪装成为了NVIDIA的文件（NVIDIA显卡市场覆盖极广，其文件一般会被认为是安全的），图标也是英伟达官方图标。 病毒处置 C:\Program Files\Microsoft MSBuild\Setring.exe C:\Program Files (x86)\Microsoft MSBuild\Setring.exe C:\Program Files\Windows Photo\Imaging.exe C:\Program Files\Windows Photo\Sadats.dll 使用了第三方安全设备的用户，也可以通过封堵以下两个URL，进行防护：http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。 病毒详情https://www.freebuf.com/articles/terminal/176936.html]]></content>
       <tags>
-        <tag>Windows-蠕虫</tag>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PowershellMiner无文件挖矿]]></title>
+    <url>%2F2019%2F02%2F20%2FPowershellMiner%E6%97%A0%E6%96%87%E4%BB%B6%E6%8C%96%E7%9F%BF%2F</url>
+    <content type="text"><![CDATA[病毒现象 服务器存在卡顿和外联异常IP等现象。 存在powershell.exe进程。 病毒处置 使用Autoruns工具（微软官网可下），选择WMI，将该WMI启动项删除（该项底部详细栏有“SELECT * FROM __InstanceModificationEvent WITHIN 5600”）。 打开“任务管理器”，将Powershell宿主进程杀掉即可。 修补漏洞：打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应的漏洞补丁（https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx）。 修改密码：如果主机账号密码比较弱，建议重置高强度的密码。 病毒详情http://sec.sangfor.com.cn/events/107.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[WannaMine]]></title>
     <url>%2F2019%2F02%2F18%2FWannaMine%2F</url>
     <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[WannaMine2.0]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
-    <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
@@ -41,9 +41,25 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
+    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
+    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
+      <tags>
+        <tag>Windows-蠕虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Wmixml挖矿病毒]]></title>
     <url>%2F2019%2F02%2F18%2FWmixml%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
     <content type="text"><![CDATA[病毒现象安全设备报wmixml挖矿或者主机访问了wmixml矿池地址。 病毒处置1.使用ProcessExplorer等工具找到挖矿的svchost.exe进程删除2.使用autoruns.exe检查开机启动，删掉病毒服务3.使用everything.exe查找appmg.dll、wvms_dp.inf、wmixml.dat文件，存在则删除4.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip5.修补漏洞：如果内网使用了JBoss，请确认好版本并修补相关漏洞6.修改密码：如果主机账号密码比较弱，建议重置高强度的密码 病毒详情https://www.freebuf.com/articles/system/169445.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WannaMine2.0]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
+    <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>

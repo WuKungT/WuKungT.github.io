@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.">
+<meta name="description" content="病毒现象 服务器存在卡顿和外联异常IP等现象。 存在powershell.exe进程。  病毒处置 使用Autoruns工具（微软官网可下），选择WMI，将该WMI启动项删除（该项底部详细栏有“SELECT * FROM __InstanceModificationEvent WITHIN 5600”）。 打开“任务管理器”，将Powershell宿主进程杀掉即可。 修补漏洞：打上“永恒之蓝”漏洞">
 <meta name="keywords" content="Windows-挖矿">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://123.com/2019/02/19/test/index.html">
+<meta property="og:title" content="PowershellMiner无文件挖矿">
+<meta property="og:url" content="http://123.com/2019/02/20/PowershellMiner无文件挖矿/index.html">
 <meta property="og:site_name" content="WuKung病毒处置方法">
-<meta property="og:description" content="病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.">
+<meta property="og:description" content="病毒现象 服务器存在卡顿和外联异常IP等现象。 存在powershell.exe进程。  病毒处置 使用Autoruns工具（微软官网可下），选择WMI，将该WMI启动项删除（该项底部详细栏有“SELECT * FROM __InstanceModificationEvent WITHIN 5600”）。 打开“任务管理器”，将Powershell宿主进程杀掉即可。 修补漏洞：打上“永恒之蓝”漏洞">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-20T01:40:15.504Z">
+<meta property="og:updated_time" content="2019-02-20T02:57:11.753Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.">
+<meta name="twitter:title" content="PowershellMiner无文件挖矿">
+<meta name="twitter:description" content="病毒现象 服务器存在卡顿和外联异常IP等现象。 存在powershell.exe进程。  病毒处置 使用Autoruns工具（微软官网可下），选择WMI，将该WMI启动项删除（该项底部详细栏有“SELECT * FROM __InstanceModificationEvent WITHIN 5600”）。 打开“任务管理器”，将Powershell宿主进程杀掉即可。 修补漏洞：打上“永恒之蓝”漏洞">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://123.com/2019/02/19/test/">
+  <link rel="canonical" href="http://123.com/2019/02/20/PowershellMiner无文件挖矿/">
 
 
 
 
 
-  <title>test | WuKung病毒处置方法</title>
+  <title>PowershellMiner无文件挖矿 | WuKung病毒处置方法</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/19/test/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/20/PowershellMiner无文件挖矿/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test</h1>
+          <h1 class="post-title" itemprop="name headline">PowershellMiner无文件挖矿</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-19T02:08:41+08:00">
-                2019-02-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-20T02:08:41+08:00">
+                2019-02-20
               </time>
             
 
@@ -333,11 +333,16 @@
 
       
         <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>C:\Windows\System32\MsraReportDataCache32.tlb<br>C:\Windows\SecureBootThemes\<br>C:\Windows\SecureBootThemes\Microsoft\<br>C:\Windows\SecureBootThemes\Crypt\<br>在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。</li>
-<li>中毒主机对同网段主机有大量445连接。</li>
+<li>服务器存在卡顿和外联异常IP等现象。</li>
+<li>存在powershell.exe进程。</li>
 </ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/164869.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/164869.html</a></p>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
+<li>使用Autoruns工具（微软官网可下），选择WMI，将该WMI启动项删除（该项底部详细栏有“SELECT * FROM __InstanceModificationEvent WITHIN 5600”）。</li>
+<li>打开“任务管理器”，将Powershell宿主进程杀掉即可。</li>
+<li>修补漏洞：打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应的漏洞补丁（<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx）。" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx）。</a></li>
+<li>修改密码：如果主机账号密码比较弱，建议重置高强度的密码。</li>
+</ol>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="http://sec.sangfor.com.cn/events/107.html" target="_blank" rel="noopener">http://sec.sangfor.com.cn/events/107.html</a></p>
 
       
     </div>
@@ -368,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/18/RDP爆破蠕虫Morto/" rel="next" title="RDP爆破蠕虫Morto">
-                <i class="fa fa-chevron-left"></i> RDP爆破蠕虫Morto
+              <a href="/2019/02/18/WannaMine/" rel="next" title="WannaMine">
+                <i class="fa fa-chevron-left"></i> WannaMine
               </a>
             
           </div>
@@ -377,6 +382,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/20/挖矿病毒BearMiner/" rel="prev" title="挖矿病毒BearMiner">
+                挖矿病毒BearMiner <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -453,7 +462,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Windows-蠕虫,">
+  <meta name="keywords" content="Windows-挖矿,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。  病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后">
-<meta name="keywords" content="Windows-蠕虫">
+<meta name="description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
+<meta name="keywords" content="Windows-挖矿">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RDP爆破蠕虫Morto">
-<meta property="og:url" content="http://123.com/2019/02/18/RDP爆破蠕虫Morto/index.html">
+<meta property="og:title" content="PowerGhost">
+<meta property="og:url" content="http://123.com/2019/02/22/PowerGhost/index.html">
 <meta property="og:site_name" content="WuKung病毒处置方法">
-<meta property="og:description" content="病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。  病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后">
+<meta property="og:description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://123.com/2019/02/18/RDP爆破蠕虫Morto/Morto1.png">
-<meta property="og:updated_time" content="2019-02-18T02:24:23.094Z">
+<meta property="og:updated_time" content="2019-02-22T03:35:01.432Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RDP爆破蠕虫Morto">
-<meta name="twitter:description" content="病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。  病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后">
-<meta name="twitter:image" content="http://123.com/2019/02/18/RDP爆破蠕虫Morto/Morto1.png">
+<meta name="twitter:title" content="PowerGhost">
+<meta name="twitter:description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://123.com/2019/02/18/RDP爆破蠕虫Morto/">
+  <link rel="canonical" href="http://123.com/2019/02/22/PowerGhost/">
 
 
 
 
 
-  <title>RDP爆破蠕虫Morto | WuKung病毒处置方法</title>
+  <title>PowerGhost | WuKung病毒处置方法</title>
   
 
 
@@ -267,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/RDP爆破蠕虫Morto/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/22/PowerGhost/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -284,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RDP爆破蠕虫Morto</h1>
+          <h1 class="post-title" itemprop="name headline">PowerGhost</h1>
         
 
         <div class="post-meta">
@@ -296,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T02:08:41+08:00">
-                2019-02-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T04:08:41+08:00">
+                2019-02-22
               </time>
             
 
@@ -334,18 +332,15 @@
       
 
       
-        <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>主机有大量对同网段主机的3389连接。</li>
-<li>C:\Windows\offline web pages目录下有cache.txt文件。</li>
-</ol>
+        <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。</p>
 <h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>删除标记的所有键值，只保留默认的<br><img src="/2019/02/18/RDP爆破蠕虫Morto/Morto1.png" alt="avatar"></li>
-<li>使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程</li>
-<li>删除C:\Windows\offline web pages\cache.txt</li>
-<li>删除成功后重启电脑确认是否还存在该病毒</li>
-<li>更改用户登录密码，通过设置高强度密码避免再次被RDP爆破</li>
+<li>使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。</li>
+<li>使用autoruns工具，选择wmi选项卡，删除掉以下两项</li>
+<li>C:\Program Files\Windows Photo\Imaging.exe</li>
+<li>C:\Program Files\Windows Photo\Sadats.dll</li>
+<li>使用了第三方安全设备的用户，也可以通过封堵以下两个URL，进行防护：<a href="http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。" target="_blank" rel="noopener">http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。</a></li>
 </ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/news/167365.html" target="_blank" rel="noopener">https://www.freebuf.com/news/167365.html</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/terminal/176936.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/terminal/176936.html</a></p>
 
       
     </div>
@@ -363,7 +358,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Windows-蠕虫/" rel="tag"># Windows-蠕虫</a>
+            <a href="/tags/Windows-挖矿/" rel="tag"># Windows-挖矿</a>
           
         </div>
       
@@ -376,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/18/Wmixml挖矿病毒/" rel="next" title="Wmixml挖矿病毒">
-                <i class="fa fa-chevron-left"></i> Wmixml挖矿病毒
+              <a href="/2019/02/20/挖矿病毒BearMiner/" rel="next" title="挖矿病毒BearMiner">
+                <i class="fa fa-chevron-left"></i> 挖矿病毒BearMiner
               </a>
             
           </div>
@@ -385,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/18/WannaMine3.0/" rel="prev" title="WannaMine3.0">
-                WannaMine3.0 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
