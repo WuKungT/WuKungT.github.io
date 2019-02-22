@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Windows-挖矿,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -80,17 +80,20 @@
 
 
 <meta name="description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
-<meta name="keywords" content="Windows-挖矿">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PowerGhost">
 <meta property="og:url" content="http://123.com/2019/02/22/PowerGhost/index.html">
 <meta property="og:site_name" content="WuKung病毒处置方法">
 <meta property="og:description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-22T03:35:01.432Z">
+<meta property="og:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_1.png">
+<meta property="og:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_2.png">
+<meta property="og:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_3.png">
+<meta property="og:updated_time" content="2019-02-22T03:53:18.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PowerGhost">
 <meta name="twitter:description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
+<meta name="twitter:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_1.png">
 
 
 
@@ -294,7 +297,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T04:08:41+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T11:49:13+08:00">
                 2019-02-22
               </time>
             
@@ -335,12 +338,14 @@
         <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。</p>
 <h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
 <li>使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。</li>
-<li>使用autoruns工具，选择wmi选项卡，删除掉以下两项</li>
-<li>C:\Program Files\Windows Photo\Imaging.exe</li>
-<li>C:\Program Files\Windows Photo\Sadats.dll</li>
-<li>使用了第三方安全设备的用户，也可以通过封堵以下两个URL，进行防护：<a href="http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。" target="_blank" rel="noopener">http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。</a></li>
+<li>使用autoruns工具，选择wmi选项卡，删除掉以下两项<br><img src="/2019/02/22/PowerGhost/autoruns_1.png" alt="avatar"></li>
+<li>在logon选项卡中，关闭两个带有winmail.exe的条目。</li>
+<li>在scheduled tasks选项卡中，关闭以下三个条目：<br><img src="/2019/02/22/PowerGhost/autoruns_2.png" alt="avatar"></li>
+<li>结束cohernece.exe进程，并在C:\Windows\Temp目录下删除病毒文件。</li>
+<li>在运行中输入compmgmt.msc，查看计划任务，删除掉如下任务：<br><img src="/2019/02/22/PowerGhost/autoruns_3.png" alt="avatar"></li>
+<li>打ms17-010的补丁，修改服务器密码。</li>
 </ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/terminal/176936.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/terminal/176936.html</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/181441.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/181441.html</a></p>
 
       
     </div>
@@ -355,12 +360,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Windows-挖矿/" rel="tag"># Windows-挖矿</a>
-          
-        </div>
       
 
       

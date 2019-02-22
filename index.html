@@ -292,7 +292,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T04:08:41+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T11:49:13+08:00">
                 2019-02-22
               </time>
             
@@ -335,12 +335,14 @@
             <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。</p>
 <h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
 <li>使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。</li>
-<li>使用autoruns工具，选择wmi选项卡，删除掉以下两项</li>
-<li>C:\Program Files\Windows Photo\Imaging.exe</li>
-<li>C:\Program Files\Windows Photo\Sadats.dll</li>
-<li>使用了第三方安全设备的用户，也可以通过封堵以下两个URL，进行防护：<a href="http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。" target="_blank" rel="noopener">http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。</a></li>
+<li>使用autoruns工具，选择wmi选项卡，删除掉以下两项<br><img src="/2019/02/22/PowerGhost/autoruns_1.png" alt="avatar"></li>
+<li>在logon选项卡中，关闭两个带有winmail.exe的条目。</li>
+<li>在scheduled tasks选项卡中，关闭以下三个条目：<br><img src="/2019/02/22/PowerGhost/autoruns_2.png" alt="avatar"></li>
+<li>结束cohernece.exe进程，并在C:\Windows\Temp目录下删除病毒文件。</li>
+<li>在运行中输入compmgmt.msc，查看计划任务，删除掉如下任务：<br><img src="/2019/02/22/PowerGhost/autoruns_3.png" alt="avatar"></li>
+<li>打ms17-010的补丁，修改服务器密码。</li>
 </ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/terminal/176936.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/terminal/176936.html</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/181441.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/181441.html</a></p>
 
           
         
@@ -776,6 +778,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine2.0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SF安服团队">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WuKung病毒处置方法">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/18/WannaMine2.0/" itemprop="url">WannaMine2.0</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T02:08:41+08:00">
+                2019-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>1.C:\Windows\System32\EnrollCertXaml.dll<br>  C:\Windows\SpeechsTracing\<br>  C:\Windows\SpeechsTracing\Microsoft\<br>  在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。</p>
+<ol start="2">
+<li>中毒主机对同网段主机有大量445连接。</li>
+</ol>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="http://www.sohu.com/a/231033783_99990767" target="_blank" rel="noopener">http://www.sohu.com/a/231033783_99990767</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine3.0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -853,137 +980,6 @@
 </ol>
 <h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
 <h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/terminal/190093.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/terminal/190093.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/RDP爆破蠕虫Morto/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SF安服团队">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WuKung病毒处置方法">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/18/RDP爆破蠕虫Morto/" itemprop="url">RDP爆破蠕虫Morto</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T02:08:41+08:00">
-                2019-02-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>主机有大量对同网段主机的3389连接。</li>
-<li>C:\Windows\offline web pages目录下有cache.txt文件。</li>
-</ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>删除标记的所有键值，只保留默认的<br><img src="/2019/02/18/RDP爆破蠕虫Morto/Morto1.png" alt="avatar"></li>
-<li>使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程</li>
-<li>删除C:\Windows\offline web pages\cache.txt</li>
-<li>删除成功后重启电脑确认是否还存在该病毒</li>
-<li>更改用户登录密码，通过设置高强度密码避免再次被RDP爆破</li>
-</ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/news/167365.html" target="_blank" rel="noopener">https://www.freebuf.com/news/167365.html</a></p>
 
           
         
@@ -1154,7 +1150,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine2.0/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/RDP爆破蠕虫Morto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -1173,7 +1169,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/18/WannaMine2.0/" itemprop="url">WannaMine2.0</a></h1>
+                <a class="post-title-link" href="/2019/02/18/RDP爆破蠕虫Morto/" itemprop="url">RDP爆破蠕虫Morto</a></h1>
         
 
         <div class="post-meta">
@@ -1225,12 +1221,18 @@
       
         
           
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>1.C:\Windows\System32\EnrollCertXaml.dll<br>  C:\Windows\SpeechsTracing\<br>  C:\Windows\SpeechsTracing\Microsoft\<br>  在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。</p>
-<ol start="2">
-<li>中毒主机对同网段主机有大量445连接。</li>
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
+<li>主机有大量对同网段主机的3389连接。</li>
+<li>C:\Windows\offline web pages目录下有cache.txt文件。</li>
 </ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="http://www.sohu.com/a/231033783_99990767" target="_blank" rel="noopener">http://www.sohu.com/a/231033783_99990767</a></p>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
+<li>删除标记的所有键值，只保留默认的<br><img src="/2019/02/18/RDP爆破蠕虫Morto/Morto1.png" alt="avatar"></li>
+<li>使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程</li>
+<li>删除C:\Windows\offline web pages\cache.txt</li>
+<li>删除成功后重启电脑确认是否还存在该病毒</li>
+<li>更改用户登录密码，通过设置高强度密码避免再次被RDP爆破</li>
+</ol>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/news/167365.html" target="_blank" rel="noopener">https://www.freebuf.com/news/167365.html</a></p>
 
           
         

@@ -3,10 +3,7 @@
   <entry>
     <title><![CDATA[PowerGhost]]></title>
     <url>%2F2019%2F02%2F22%2FPowerGhost%2F</url>
-    <content type="text"><![CDATA[病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。 使用autoruns工具，选择wmi选项卡，删除掉以下两项 C:\Program Files\Windows Photo\Imaging.exe C:\Program Files\Windows Photo\Sadats.dll 使用了第三方安全设备的用户，也可以通过封堵以下两个URL，进行防护：http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。 病毒详情https://www.freebuf.com/articles/terminal/176936.html]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
-      </tags>
+    <content type="text"><![CDATA[病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。 使用autoruns工具，选择wmi选项卡，删除掉以下两项 在logon选项卡中，关闭两个带有winmail.exe的条目。 在scheduled tasks选项卡中，关闭以下三个条目： 结束cohernece.exe进程，并在C:\Windows\Temp目录下删除病毒文件。 在运行中输入compmgmt.msc，查看计划任务，删除掉如下任务： 打ms17-010的补丁，修改服务器密码。 病毒详情https://www.freebuf.com/articles/network/181441.html]]></content>
   </entry>
   <entry>
     <title><![CDATA[挖矿病毒BearMiner]]></title>
@@ -33,19 +30,19 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[WannaMine3.0]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
-    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
+    <title><![CDATA[WannaMine2.0]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
+    <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
-    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
-    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
+    <title><![CDATA[WannaMine3.0]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
+    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
       <tags>
-        <tag>Windows-蠕虫</tag>
+        <tag>Windows-挖矿</tag>
       </tags>
   </entry>
   <entry>
@@ -57,11 +54,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[WannaMine2.0]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
-    <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
+    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
+    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
+    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
       <tags>
-        <tag>Windows-挖矿</tag>
+        <tag>Windows-蠕虫</tag>
       </tags>
   </entry>
   <entry>
