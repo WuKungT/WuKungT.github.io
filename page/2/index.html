@@ -333,7 +333,7 @@
         
           
             <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>C:\Windows\SysWOW64\下存在svchost.exe、C:\Windows\SysWOW64\driver目录下存在svchost.exe taskmgr.exe(进程管理器)、temp目录下存在svchost.exe,且存在所有的利用工具包含m.ps1、mkatz.ini(mimikatz)、temp.vbs</li>
+<li>C:\Windows\SysWOW64\下存在svhost.exe、C:\Windows\SysWOW64\driver目录下存在svchost.exe taskmgr.exe(进程管理器)、temp目录下存在svchost.exe,且存在所有的利用工具包含m.ps1、mkatz.ini(mimikatz)、temp.vbs</li>
 <li>计划任务存在Bluetooths、DnsScan</li>
 <li>进程项存在svchost.exe(属性查看来源于temp)、taskmgr.exe(查看属性来源于C:\Windows\SysWOW64\driver)</li>
 </ol>
@@ -342,7 +342,7 @@
 <li>修复”永恒之蓝”的漏洞，<a href="https://docs.microsoft.com/zh-cn/security-updates/Securitybulletins/2017/ms17-010" target="_blank" rel="noopener">补丁下载</a>。</li>
 <li>若不使用共享服务，关闭相关共享端口(135、137、138、139、445)及不必要的端口。</li>
 <li>删除任务计划Bluetooths、DnsScan</li>
-<li>删除C:\Windows\SysWOW64\下的svchost.exe、taskmgr.exe,删除temp目录下面的m.ps1、mkatz.ini(mimikatz)、tmp.vbs、svchost.exe</li>
+<li>删除C:\Windows\SysWOW64\下的svhost.exe，删除C:\Windows\SysWOW64\driver目录下存在svchost.exe、taskmgr.exe，删除temp目录下面的m.ps1、mkatz.ini(mimikatz)、tmp.vbs、svchost.exe</li>
 <li>服务器密码修改为八位及其以上含大小字母特殊字符，切勿使用弱口令</li>
 <li>再次全盘查杀，确保确实病毒已经处理</li>
 </ol>

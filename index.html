@@ -1157,7 +1157,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/RDP爆破蠕虫Morto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -1176,7 +1176,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/18/WannaMine/" itemprop="url">WannaMine</a></h1>
+                <a class="post-title-link" href="/2019/02/18/RDP爆破蠕虫Morto/" itemprop="url">RDP爆破蠕虫Morto</a></h1>
         
 
         <div class="post-meta">
@@ -1229,11 +1229,17 @@
         
           
             <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>C:\Windows\System32\MsraReportDataCache32.tlb<br>C:\Windows\SecureBootThemes\<br>C:\Windows\SecureBootThemes\Microsoft\<br>C:\Windows\SecureBootThemes\Crypt\<br>在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。</li>
-<li>中毒主机对同网段主机有大量445连接。</li>
+<li>主机有大量对同网段主机的3389连接。</li>
+<li>C:\Windows\offline web pages目录下有cache.txt文件。</li>
 </ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/164869.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/164869.html</a></p>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
+<li>删除标记的所有键值，只保留默认的<br><img src="/2019/02/18/RDP爆破蠕虫Morto/Morto1.png" alt="avatar"></li>
+<li>使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程</li>
+<li>删除C:\Windows\offline web pages\cache.txt</li>
+<li>删除成功后重启电脑确认是否还存在该病毒</li>
+<li>更改用户登录密码，通过设置高强度密码避免再次被RDP爆破</li>
+</ol>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/news/167365.html" target="_blank" rel="noopener">https://www.freebuf.com/news/167365.html</a></p>
 
           
         
@@ -1407,7 +1413,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/RDP爆破蠕虫Morto/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/18/WannaMine/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -1426,7 +1432,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/18/RDP爆破蠕虫Morto/" itemprop="url">RDP爆破蠕虫Morto</a></h1>
+                <a class="post-title-link" href="/2019/02/18/WannaMine/" itemprop="url">WannaMine</a></h1>
         
 
         <div class="post-meta">
@@ -1479,17 +1485,11 @@
         
           
             <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>主机有大量对同网段主机的3389连接。</li>
-<li>C:\Windows\offline web pages目录下有cache.txt文件。</li>
+<li>C:\Windows\System32\MsraReportDataCache32.tlb<br>C:\Windows\SecureBootThemes\<br>C:\Windows\SecureBootThemes\Microsoft\<br>C:\Windows\SecureBootThemes\Crypt\<br>在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。</li>
+<li>中毒主机对同网段主机有大量445连接。</li>
 </ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>删除标记的所有键值，只保留默认的<br><img src="/2019/02/18/RDP爆破蠕虫Morto/Morto1.png" alt="avatar"></li>
-<li>使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程</li>
-<li>删除C:\Windows\offline web pages\cache.txt</li>
-<li>删除成功后重启电脑确认是否还存在该病毒</li>
-<li>更改用户登录密码，通过设置高强度密码避免再次被RDP爆破</li>
-</ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/news/167365.html" target="_blank" rel="noopener">https://www.freebuf.com/news/167365.html</a></p>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><p>1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。<br>2.删除上述文件夹中的病毒文件并关闭病毒进程。<br>3.使用SfabAntiBot.exe进行全盘查杀。下载地址： <a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a><br>4.关闭135，137，139，445网络共享端口<br>5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx</a></p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/164869.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/164869.html</a></p>
 
           
         
