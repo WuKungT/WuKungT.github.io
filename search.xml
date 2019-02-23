@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[watchdogs感染性挖矿病毒]]></title>
     <url>%2F2019%2F02%2F23%2Fwatchdogs%E6%84%9F%E6%9F%93%E6%80%A7%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
-    <content type="text"><![CDATA[病毒现象表现为/tmp临时目录存在watchdogs文件，出现了crontab任务异常、网络异常、系统文件被删除、CPU异常卡顿等情况，严重影响用户业务 病毒处置 删除恶意动态链接库/usr/local/lib/libioset.so，排查清理/etc/ld.so.preload中是否加载1中的恶意动态链接库 清理crontab异常项，删除恶意任务(无法修改则先执行4-a) 使用kill命令终止挖矿进程 排查清理残留的病毒文件: a. chattr -i /usr/sbin/watchdogs /etc/init.d/watchdogs /var/spool/cron/root /etc/cron.d/root b. chkconfig watchdogs off c. rm -f /usr/sbin/watchdogs /etc/init.d/watchdogs 相关系统命令可能被病毒删除，建议重新进行安装恢复 由于文件只读且相关命令被hook，需要安装busybox通过busybox rm命令删除 部分操作需要重启机器生效 病毒详情https://mp.weixin.qq.com/s/dwY--BLzcyeXqPUZlhb__Q]]></content>
+    <content type="text"><![CDATA[病毒现象表现为/tmp临时目录存在watchdogs文件，出现了crontab任务异常、网络异常、系统文件被删除、CPU异常卡顿等情况，严重影响用户业务 病毒处置 删除恶意动态链接库/usr/local/lib/libioset.so，排查清理/etc/ld.so.preload中是否加载1中的恶意动态链接库 清理crontab异常项，删除恶意任务(无法修改则先执行4-a) 使用kill命令终止挖矿进程 排查清理残留的病毒文件:a. chattr -i /usr/sbin/watchdogs /etc/init.d/watchdogs /var/spool/cron/root /etc/cron.d/rootb. chkconfig watchdogs offc. rm -f /usr/sbin/watchdogs /etc/init.d/watchdogs 相关系统命令可能被病毒删除，建议重新进行安装恢复 由于文件只读且相关命令被hook，需要安装busybox通过busybox rm命令删除 部分操作需要重启机器生效 病毒详情https://mp.weixin.qq.com/s/dwY--BLzcyeXqPUZlhb__Q]]></content>
       <tags>
         <tag>Linux_挖矿</tag>
       </tags>
@@ -33,25 +33,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
-    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
-    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
-      <tags>
-        <tag>Windows-蠕虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[WannaMine2.0]]></title>
     <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
     <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Wmixml挖矿病毒]]></title>
-    <url>%2F2019%2F02%2F18%2FWmixml%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
-    <content type="text"><![CDATA[病毒现象安全设备报wmixml挖矿或者主机访问了wmixml矿池地址。 病毒处置1.使用ProcessExplorer等工具找到挖矿的svchost.exe进程删除2.使用autoruns.exe检查开机启动，删掉病毒服务3.使用everything.exe查找appmg.dll、wvms_dp.inf、wmixml.dat文件，存在则删除4.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip5.修补漏洞：如果内网使用了JBoss，请确认好版本并修补相关漏洞6.修改密码：如果主机账号密码比较弱，建议重置高强度的密码 病毒详情https://www.freebuf.com/articles/system/169445.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
@@ -65,9 +49,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[基于注册表的poweliks病毒]]></title>
-    <url>%2F2019%2F02%2F18%2F%E5%9F%BA%E4%BA%8E%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%9A%84poweliks%E7%97%85%E6%AF%92%2F</url>
-    <content type="text"><![CDATA[病毒现象主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。 病毒处置 结束进程dllhost.exe 使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认） 病毒详情https://www.freebuf.com/articles/network/169296.html]]></content>
+    <title><![CDATA[Wmixml挖矿病毒]]></title>
+    <url>%2F2019%2F02%2F18%2FWmixml%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
+    <content type="text"><![CDATA[病毒现象安全设备报wmixml挖矿或者主机访问了wmixml矿池地址。 病毒处置1.使用ProcessExplorer等工具找到挖矿的svchost.exe进程删除2.使用autoruns.exe检查开机启动，删掉病毒服务3.使用everything.exe查找appmg.dll、wvms_dp.inf、wmixml.dat文件，存在则删除4.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip5.修补漏洞：如果内网使用了JBoss，请确认好版本并修补相关漏洞6.修改密码：如果主机账号密码比较弱，建议重置高强度的密码 病毒详情https://www.freebuf.com/articles/system/169445.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
@@ -78,6 +62,22 @@
     <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[基于注册表的poweliks病毒]]></title>
+    <url>%2F2019%2F02%2F18%2F%E5%9F%BA%E4%BA%8E%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%9A%84poweliks%E7%97%85%E6%AF%92%2F</url>
+    <content type="text"><![CDATA[病毒现象主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。 病毒处置 结束进程dllhost.exe 使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认） 病毒详情https://www.freebuf.com/articles/network/169296.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
+    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
+    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
+      <tags>
+        <tag>Windows-蠕虫</tag>
       </tags>
   </entry>
   <entry>

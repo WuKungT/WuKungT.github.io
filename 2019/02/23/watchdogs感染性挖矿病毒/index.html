@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="WuKung病毒处置方法">
 <meta property="og:description" content="病毒现象表现为/tmp临时目录存在watchdogs文件，出现了crontab任务异常、网络异常、系统文件被删除、CPU异常卡顿等情况，严重影响用户业务 病毒处置 删除恶意动态链接库/usr/local/lib/libioset.so，排查清理/etc/ld.so.preload中是否加载1中的恶意动态链接库 清理crontab异常项，删除恶意任务(无法修改则先执行4-a) 使用kill命令终止挖">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T01:48:50.536Z">
+<meta property="og:updated_time" content="2019-02-23T03:31:29.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="watchdogs感染性挖矿病毒">
 <meta name="twitter:description" content="病毒现象表现为/tmp临时目录存在watchdogs文件，出现了crontab任务异常、网络异常、系统文件被删除、CPU异常卡顿等情况，严重影响用户业务 病毒处置 删除恶意动态链接库/usr/local/lib/libioset.so，排查清理/etc/ld.so.preload中是否加载1中的恶意动态链接库 清理crontab异常项，删除恶意任务(无法修改则先执行4-a) 使用kill命令终止挖">
@@ -337,28 +337,13 @@
 <li>删除恶意动态链接库/usr/local/lib/libioset.so，排查清理/etc/ld.so.preload中是否加载1中的恶意动态链接库</li>
 <li>清理crontab异常项，删除恶意任务(无法修改则先执行4-a)</li>
 <li>使用kill命令终止挖矿进程</li>
-<li>排查清理残留的病毒文件:<blockquote>
-<blockquote>
-<p>a. chattr -i /usr/sbin/watchdogs /etc/init.d/watchdogs /var/spool/cron/root /etc/cron.d/root </p>
-</blockquote>
-</blockquote>
+<li><p>排查清理残留的病毒文件:<br><code>a. chattr -i /usr/sbin/watchdogs /etc/init.d/watchdogs /var/spool/cron/root /etc/cron.d/root</code><br><code>b. chkconfig watchdogs off</code><br><code>c. rm -f /usr/sbin/watchdogs /etc/init.d/watchdogs</code></p>
 </li>
-</ol>
-<blockquote>
-<blockquote>
-<p>b. chkconfig watchdogs off</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>c. rm -f /usr/sbin/watchdogs /etc/init.d/watchdogs</p>
-<ol start="5">
-<li>相关系统命令可能被病毒删除，建议重新进行安装恢复</li>
+<li><p>相关系统命令可能被病毒删除，建议重新进行安装恢复</p>
+</li>
 <li>由于文件只读且相关命令被hook，需要安装busybox通过busybox rm命令删除</li>
 <li>部分操作需要重启机器生效</li>
 </ol>
-</blockquote>
-</blockquote>
 <h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://mp.weixin.qq.com/s/dwY--BLzcyeXqPUZlhb__Q" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/dwY--BLzcyeXqPUZlhb__Q</a></p>
 
       
