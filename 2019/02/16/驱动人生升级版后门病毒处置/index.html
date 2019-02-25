@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="WuKung病毒处置方法">
 <meta property="og:description" content="病毒现象 C:\Windows\SysWOW64\下存在svhost.exe、C:\Windows\SysWOW64\driver目录下存在svchost.exe taskmgr.exe(进程管理器)、temp目录下存在svchost.exe,且存在所有的利用工具包含m.ps1、mkatz.ini(mimikatz)、temp.vbs 计划任务存在Bluetooths、DnsScan 进程项存在s">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T09:58:45.374Z">
+<meta property="og:updated_time" content="2019-02-25T01:17:44.216Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="驱动人生升级版后门病毒处置">
 <meta name="twitter:description" content="病毒现象 C:\Windows\SysWOW64\下存在svhost.exe、C:\Windows\SysWOW64\driver目录下存在svchost.exe taskmgr.exe(进程管理器)、temp目录下存在svchost.exe,且存在所有的利用工具包含m.ps1、mkatz.ini(mimikatz)、temp.vbs 计划任务存在Bluetooths、DnsScan 进程项存在s">
@@ -346,6 +346,16 @@
 <li>服务器密码修改为八位及其以上含大小字母特殊字符，切勿使用弱口令</li>
 <li>再次全盘查杀，确保确实病毒已经处理</li>
 </ol>
+<h2 id="补充-针对新老版本）"><a href="#补充-针对新老版本）" class="headerlink" title="补充(针对新老版本）"></a>补充(针对新老版本）</h2><ol>
+<li><p>恶意文件可能存在的地方</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">c:\windows\system32\svhost.exe</span><br><span class="line">c:\windows\system32\drivers\svchost.exe</span><br><span class="line">c:\windows\system32\drivers\taskmgr.exe</span><br><span class="line">c:\windows\system32\wmiex.exe</span><br><span class="line">c:\windows\sysWOW64\svhost.exe</span><br><span class="line">c:\windows\sysWOW64\drivers\svchost.exe</span><br><span class="line">c:\windows\sysWOW64\drivers\taskmgr.exe</span><br><span class="line">c:\windows\sysWOW64\wmiex.exe</span><br><span class="line">c:\windows\temp\svchost.exe</span><br><span class="line">c:\windows\temp\mkatz.ini</span><br><span class="line">c:\windows\temp\m.ps1</span><br><span class="line">C:\windows\temp\ttt.exe</span><br><span class="line">%appdata%\Microsoft\cred.ps1</span><br><span class="line">C:\windows\temp\tmp.vbs</span><br><span class="line">%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\run.bat</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可能存在的恶意进程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">c:\windows\system32\svhost.exe</span><br><span class="line">c:\windows\system32\drivers\svchost.exe</span><br><span class="line">c:\windows\system32\drivers\taskmgr.exe</span><br><span class="line">c:\windows\system32\wmiex.exe</span><br><span class="line">c:\windows\sysWOW64\svhost.exe</span><br><span class="line">c:\windows\sysWOW64\drivers\svchost.exe</span><br><span class="line">c:\windows\sysWOW64\drivers\taskmgr.exe</span><br><span class="line">c:\windows\sysWOW64\wmiex.exe</span><br><span class="line">c:\windows\temp\svchost.exe</span><br><span class="line">C:\windows\temp\ttt.exe</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册表<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run-&gt;Ddriver</code><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run-&gt;WebServers</code></p>
+</li>
+</ol>
 <h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://guanjia.qq.com/news/n3/2475.html" target="_blank" rel="noopener">https://guanjia.qq.com/news/n3/2475.html</a></p>
 
       
@@ -387,8 +397,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/18/RDP爆破蠕虫Morto/" rel="prev" title="RDP爆破蠕虫Morto">
-                RDP爆破蠕虫Morto <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/18/WannaMine2.0/" rel="prev" title="WannaMine2.0">
+                WannaMine2.0 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -512,7 +522,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒现象"><span class="nav-number">1.</span> <span class="nav-text">病毒现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒处置"><span class="nav-number">2.</span> <span class="nav-text">病毒处置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒详情"><span class="nav-number">3.</span> <span class="nav-text">病毒详情</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒现象"><span class="nav-number">1.</span> <span class="nav-text">病毒现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒处置"><span class="nav-number">2.</span> <span class="nav-text">病毒处置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充-针对新老版本）"><span class="nav-number">3.</span> <span class="nav-text">补充(针对新老版本）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒详情"><span class="nav-number">4.</span> <span class="nav-text">病毒详情</span></a></li></ol></div>
             
 
           </div>
