@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Windows补丁更新]]></title>
     <url>%2F2019%2F03%2F05%2FWindows%E8%A1%A5%E4%B8%81%E6%9B%B4%E6%96%B0%2F</url>
-    <content type="text"><![CDATA[查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图： Windows 7 SP1 前置补丁： kb947821 Windows server 2008 r2前置补丁： KB976232 windows server 2012 r2前置补丁： KB3021910 KB2919355 补丁安装的风险因为主机安装补丁后重启才会生效，因此极小概率主机无法正常重启或重启时间较长，而导致影响业务。]]></content>
+    <content type="text"><![CDATA[查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图：选择对应的系统版本以windows 7 64位为例，在结果页面选择相应版本的补丁选择 ‘download’ 下载补丁下载补丁后打开补丁安装补丁选择重启生效补丁查看补丁已经安装成功了ms08-067的补丁下载页面也差不多类似，只是下载的界面更为简洁明了 Windows 7 SP1 前置补丁： kb947821 Windows server 2008 r2前置补丁： KB976232 windows server 2012 r2前置补丁： KB3021910 KB2919355 补丁安装的风险因为主机安装补丁后重启才会生效，因此极小概率主机无法正常重启或重启时间较长，而导致影响业务。]]></content>
   </entry>
   <entry>
     <title><![CDATA[XorDDoS木马]]></title>
@@ -62,6 +62,14 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[WannaMine2.0]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
+    <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[WannaMine]]></title>
     <url>%2F2019%2F02%2F18%2FWannaMine%2F</url>
     <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
@@ -73,14 +81,6 @@
     <title><![CDATA[基于注册表的poweliks病毒]]></title>
     <url>%2F2019%2F02%2F18%2F%E5%9F%BA%E4%BA%8E%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%9A%84poweliks%E7%97%85%E6%AF%92%2F</url>
     <content type="text"><![CDATA[病毒现象主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。 病毒处置 结束进程dllhost.exe 使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认） 病毒详情https://www.freebuf.com/articles/network/169296.html]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[WannaMine2.0]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
-    <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
