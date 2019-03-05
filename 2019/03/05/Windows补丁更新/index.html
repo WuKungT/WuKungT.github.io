@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Windows_挖矿,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,22 +79,21 @@
 
 
 
-<meta name="description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
-<meta name="keywords" content="Windows_挖矿">
+<meta name="description" content="查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图： Windo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PowerGhost">
-<meta property="og:url" content="http://123.com/2019/02/22/PowerGhost/index.html">
+<meta property="og:title" content="Windows补丁更新">
+<meta property="og:url" content="http://123.com/2019/03/05/Windows补丁更新/index.html">
 <meta property="og:site_name" content="WuKung病毒处置方法">
-<meta property="og:description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
+<meta property="og:description" content="查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图： Windo">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_1.png">
-<meta property="og:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_2.png">
-<meta property="og:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_3.png">
-<meta property="og:updated_time" content="2019-02-23T01:49:30.198Z">
+<meta property="og:image" content="http://123.com/2019/03/05/Windows补丁更新/1.png">
+<meta property="og:image" content="http://123.com/2019/03/05/Windows补丁更新/2.png">
+<meta property="og:image" content="http://123.com/2019/03/05/Windows补丁更新/3.png">
+<meta property="og:updated_time" content="2019-03-05T07:28:25.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PowerGhost">
-<meta name="twitter:description" content="病毒现象在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。 病毒处置 使用Tcpview查看链接，定位到恶意的进程powe">
-<meta name="twitter:image" content="http://123.com/2019/02/22/PowerGhost/autoruns_1.png">
+<meta name="twitter:title" content="Windows补丁更新">
+<meta name="twitter:description" content="查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图： Windo">
+<meta name="twitter:image" content="http://123.com/2019/03/05/Windows补丁更新/1.png">
 
 
 
@@ -124,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://123.com/2019/02/22/PowerGhost/">
+  <link rel="canonical" href="http://123.com/2019/03/05/Windows补丁更新/">
 
 
 
 
 
-  <title>PowerGhost | WuKung病毒处置方法</title>
+  <title>Windows补丁更新 | WuKung病毒处置方法</title>
   
 
 
@@ -269,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/22/PowerGhost/">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/03/05/Windows补丁更新/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SF安服团队">
@@ -286,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PowerGhost</h1>
+          <h1 class="post-title" itemprop="name headline">Windows补丁更新</h1>
         
 
         <div class="post-meta">
@@ -298,8 +297,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T11:49:13+08:00">
-                2019-02-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-05T15:26:53+08:00">
+                2019-03-05
               </time>
             
 
@@ -336,17 +335,23 @@
       
 
       
-        <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。</p>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。</li>
-<li>使用autoruns工具，选择wmi选项卡，删除掉以下两项<br><img src="/2019/02/22/PowerGhost/autoruns_1.png" alt="avatar"></li>
-<li>在logon选项卡中，关闭两个带有winmail.exe的条目。</li>
-<li>在scheduled tasks选项卡中，关闭以下三个条目：<br><img src="/2019/02/22/PowerGhost/autoruns_2.png" alt="avatar"></li>
-<li>结束cohernece.exe进程，并在C:\Windows\Temp目录下删除病毒文件。</li>
-<li>在运行中输入compmgmt.msc，查看计划任务，删除掉如下任务：<br><img src="/2019/02/22/PowerGhost/autoruns_3.png" alt="avatar"></li>
-<li>打ms17-010的补丁，修改服务器密码。</li>
+        <h2 id="查看补丁"><a href="#查看补丁" class="headerlink" title="查看补丁"></a>查看补丁</h2><p>在命令行界面键入 systeminfo 命令<br><img src="/2019/03/05/Windows补丁更新/1.png" alt="avatar"><br>得到相应的补丁号<br><img src="/2019/03/05/Windows补丁更新/2.png" alt="avatar"><br>可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。<br><img src="/2019/03/05/Windows补丁更新/3.png" alt="avatar"></p>
+<h2 id="官网下载补丁"><a href="#官网下载补丁" class="headerlink" title="官网下载补丁"></a>官网下载补丁</h2><p>这里以ms17010 为例子：<a href="https://docs.microsoft.com/zh-cn/security-updates/Securitybulletins/2017/ms17-010" target="_blank" rel="noopener">访问地址</a></p>
+<h2 id="不同操作系统打不上补丁解决方法"><a href="#不同操作系统打不上补丁解决方法" class="headerlink" title="不同操作系统打不上补丁解决方法"></a>不同操作系统打不上补丁解决方法</h2><p>部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图：</p>
+<p>Windows 7 SP1 前置补丁：</p>
+<ol>
+<li>kb947821</li>
 </ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/181441.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/181441.html</a></p>
+<p>Windows server 2008 r2前置补丁：</p>
+<ol>
+<li>KB976232</li>
+</ol>
+<p>windows server 2012 r2前置补丁：</p>
+<ol>
+<li>KB3021910</li>
+<li>KB2919355</li>
+</ol>
+<h2 id="补丁安装的风险"><a href="#补丁安装的风险" class="headerlink" title="补丁安装的风险"></a>补丁安装的风险</h2><p>因为主机安装补丁后重启才会生效，因此极小概率主机无法正常重启或重启时间较长，而导致影响业务。</p>
 
       
     </div>
@@ -362,12 +367,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Windows-挖矿/" rel="tag"># Windows_挖矿</a>
-          
-        </div>
-      
 
       
       
@@ -377,8 +376,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/20/挖矿病毒BearMiner/" rel="next" title="挖矿病毒BearMiner">
-                <i class="fa fa-chevron-left"></i> 挖矿病毒BearMiner
+              <a href="/2019/02/25/XorDDoS木马/" rel="next" title="XorDDoS木马">
+                <i class="fa fa-chevron-left"></i> XorDDoS木马
               </a>
             
           </div>
@@ -386,10 +385,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/23/watchdogs感染性挖矿病毒/" rel="prev" title="watchdogs感染性挖矿病毒">
-                watchdogs感染性挖矿病毒 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -512,7 +507,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒现象"><span class="nav-number">1.</span> <span class="nav-text">病毒现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒处置"><span class="nav-number">2.</span> <span class="nav-text">病毒处置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒详情"><span class="nav-number">3.</span> <span class="nav-text">病毒详情</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看补丁"><span class="nav-number">1.</span> <span class="nav-text">查看补丁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官网下载补丁"><span class="nav-number">2.</span> <span class="nav-text">官网下载补丁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同操作系统打不上补丁解决方法"><span class="nav-number">3.</span> <span class="nav-text">不同操作系统打不上补丁解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补丁安装的风险"><span class="nav-number">4.</span> <span class="nav-text">补丁安装的风险</span></a></li></ol></div>
             
 
           </div>
