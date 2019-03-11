@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Windows补丁更新]]></title>
     <url>%2F2019%2F03%2F05%2FWindows%E8%A1%A5%E4%B8%81%E6%9B%B4%E6%96%B0%2F</url>
-    <content type="text"><![CDATA[查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图：选择对应的系统版本以windows 7 64位为例，在结果页面选择相应版本的补丁选择 ‘download’ 下载补丁下载补丁后打开补丁安装补丁选择重启生效补丁查看补丁已经安装成功了ms08-067的补丁下载页面也差不多类似，只是下载的界面更为简洁明了 Windows 7 SP1 前置补丁： kb947821 Windows server 2008 r2前置补丁： KB976232 windows server 2012 r2前置补丁： KB3021910 KB2919355 补丁安装的风险因为主机安装补丁后重启才会生效，因此极小概率主机无法正常重启或重启时间较长，而导致影响业务。]]></content>
+    <content type="text"><![CDATA[查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图：选择对应的系统版本以windows 7 64位为例，在结果页面选择相应版本的补丁选择 ‘download’ 下载补丁下载补丁后打开补丁安装补丁选择重启生效补丁查看补丁已经安装成功了ms08-067的补丁下载页面也差不多类似，只是下载的界面更为简洁明了 Windows 7 SP1 前置补丁： kb947821 Windows server 2008 r2前置补丁： KB976932 windows server 2012 r2前置补丁： KB3021910 KB2919355 补丁安装的风险因为主机安装补丁后重启才会生效，因此极小概率主机无法正常重启或重启时间较长，而导致影响业务。]]></content>
   </entry>
   <entry>
     <title><![CDATA[XorDDoS木马]]></title>
@@ -46,19 +46,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Wmixml挖矿病毒]]></title>
-    <url>%2F2019%2F02%2F18%2FWmixml%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
-    <content type="text"><![CDATA[病毒现象安全设备报wmixml挖矿或者主机访问了wmixml矿池地址。 病毒处置1.使用ProcessExplorer等工具找到挖矿的svchost.exe进程删除2.使用autoruns.exe检查开机启动，删掉病毒服务3.使用everything.exe查找appmg.dll、wvms_dp.inf、wmixml.dat文件，存在则删除4.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip5.修补漏洞：如果内网使用了JBoss，请确认好版本并修补相关漏洞6.修改密码：如果主机账号密码比较弱，建议重置高强度的密码 病毒详情https://www.freebuf.com/articles/system/169445.html]]></content>
+    <title><![CDATA[WannaMine]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine%2F</url>
+    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
-    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
-    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
-      <tags>
-        <tag>Windows-蠕虫</tag>
       </tags>
   </entry>
   <entry>
@@ -70,9 +62,17 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[WannaMine]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine%2F</url>
-    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
+    <title><![CDATA[Wmixml挖矿病毒]]></title>
+    <url>%2F2019%2F02%2F18%2FWmixml%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
+    <content type="text"><![CDATA[病毒现象安全设备报wmixml挖矿或者主机访问了wmixml矿池地址。 病毒处置1.使用ProcessExplorer等工具找到挖矿的svchost.exe进程删除2.使用autoruns.exe检查开机启动，删掉病毒服务3.使用everything.exe查找appmg.dll、wvms_dp.inf、wmixml.dat文件，存在则删除4.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip5.修补漏洞：如果内网使用了JBoss，请确认好版本并修补相关漏洞6.修改密码：如果主机账号密码比较弱，建议重置高强度的密码 病毒详情https://www.freebuf.com/articles/system/169445.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WannaMine3.0]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
+    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
@@ -86,11 +86,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[WannaMine3.0]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
-    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
+    <title><![CDATA[RDP爆破蠕虫Morto]]></title>
+    <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
+    <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
       <tags>
-        <tag>Windows-挖矿</tag>
+        <tag>Windows-蠕虫</tag>
       </tags>
   </entry>
   <entry>
