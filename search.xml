@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Gates(盖茨)木马]]></title>
+    <url>%2F2019%2F04%2F24%2F%E7%9B%96%E8%8C%A8%E6%9C%A8%E9%A9%AC%E5%A4%84%E7%BD%AE%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[病毒现象对外DOS攻击 病毒处置 删除：/tmp/gates.lod 删除：/tmp/moni.lod 删除：/etc/init.d/DbSecuritySpt 删除：/etc/init.d/selinux 删除被篡改的命令文件(篡改大小后均为1.2M)： rm -f /usr/sbin/lsof rm -f /usr/sbin/ss rm -f /bin/netstat rm -f /bin/ps 替换为干净文件： cp /usr/bin/dpkgd/losf /usr/sbin/lsof cp /usr/bin/dpkgd/netstat /bin/netstat cp /usr/bin/dpkgd/ps /bin/ps cp /usr/bin/dpkgd/ss /usr/sbin/ss 降权恶意文件： chmod 000 /usr/bin/bsd-port/conf.n chmod 000 /usr/bin/bsd-port/conf.n chmod 000 /usr/bin/bsd-port/getty chmod 000 /usr/bin/bsd-port/getty.lock chmod 000 /usr/bin/.sshd chmod 000 /etc/rc.d/init.d/DbSecuritySpt chmod 000 /etc/rc.d/rc*.d/S97DbSecuritySpt chmod 000 /etc/rc.d/init.d/selinux chmod 000 /etc/rc.d/rc*.d/S99selinux 病毒详情https://www.360zhijia.com/anquan/426367.html]]></content>
+      <tags>
+        <tag>Linux_挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[U盘快捷方式病毒处置办法]]></title>
+    <url>%2F2019%2F04%2F24%2FU%E7%9B%98%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E7%97%85%E6%AF%92%E5%A4%84%E7%BD%AE%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[病毒现象U盘里的文件变为快捷方式，电脑重启 病毒处置 使用”金山U盘专杀工具”查杀：http://cu003.www.duba.net/duba/tools/dubatools/usb/kavudisk.exe 使用杀软进行全盘查杀病毒，并隔离病毒。 显示隐藏文件及恢复隐藏属性的方法： 开始&gt;运行&gt;gpedit.msc 用户配置 &gt; 管理模块 &gt; windows组件 &gt; windows资源管理器 &gt; 从”工具”菜单删除”文件夹选项”菜单,改为”已禁用”。 文件夹和搜索选项即可显示，如图： 按下图选择后，点击保存即可显示被隐藏的文件： 如果想将被改为“隐藏”的文件夹恢复为正常显示，将下列脚本保存为bat后缀的文件，并放在需要恢复的目录下(或U盘内)进行恢复。脚本如下：:: BatchGotAdmin:————————————-REM –&gt; Check for permissions nul 2&gt;&amp;1 “%SYSTEMROOT%\system32\cacls.exe” “%SYSTEMROOT%\system32\config\system”REM –&gt; If error flag set, we do not have admin.if ‘%errorlevel%’ NEQ ‘0’ (echo Requesting administrative privileges…goto UACPrompt) else ( goto gotAdmin ):UACPromptecho Set UAC = CreateObject^(“Shell.Application”^) &gt; “%temp%\getadmin.vbs”echo UAC.ShellExecute “%~s0”, “”, “”, “runas”, 1 &gt;&gt; “%temp%\getadmin.vbs”“%temp%\getadmin.vbs”exit /B:gotAdminif exist “%temp%\getadmin.vbs” ( del “%temp%\getadmin.vbs” )pushd “%CD%”CD /D “%~dp0”:————————————–for /f “delims=?” %%a in (‘dir /a /b’) do attrib -a -s -h -r “%%a”pause&gt;nulexit 病毒详情https://blog.csdn.net/Lulu11235813/article/details/52778942]]></content>
+      <tags>
+        <tag>Windows_蠕虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[FakeFolder]]></title>
+    <url>%2F2019%2F04%2F24%2FFakeFolder%2F</url>
+    <content type="text"><![CDATA[病毒现象被感染主机，系统中的文件夹全部变成了大小相同的“应用程序”exe类文件，如图所示：“文件夹选项”变灰无法选择： 病毒处置 结束进程：样式为文件夹图标的C:\ProgramData\wmimgmt.exe 使用杀软进行全盘查杀病毒，并隔离病毒 显示隐藏文件及恢复隐藏属性的方法： 开始&gt;运行&gt;gpedit.msc 用户配置 &gt; 管理模块 &gt; windows组件 &gt; windows资源管理器 &gt; 从”工具”菜单删除”文件夹选项”菜单,改为”已禁用”。 文件夹和搜索选项即可显示，如图： 按下图选择后，点击保存即可显示被隐藏的文件： 如果想将被改为“隐藏”的文件夹恢复为正常显示，将下列脚本保存为bat后缀的文件，并放在需要恢复的目录下进行恢复。脚本如下：:: BatchGotAdmin:————————————-REM –&gt; Check for permissions nul 2&gt;&amp;1 “%SYSTEMROOT%\system32\cacls.exe” “%SYSTEMROOT%\system32\config\system”REM –&gt; If error flag set, we do not have admin.if ‘%errorlevel%’ NEQ ‘0’ (echo Requesting administrative privileges…goto UACPrompt) else ( goto gotAdmin ):UACPromptecho Set UAC = CreateObject^(“Shell.Application”^) &gt; “%temp%\getadmin.vbs”echo UAC.ShellExecute “%~s0”, “”, “”, “runas”, 1 &gt;&gt; “%temp%\getadmin.vbs”“%temp%\getadmin.vbs”exit /B:gotAdminif exist “%temp%\getadmin.vbs” ( del “%temp%\getadmin.vbs” )pushd “%CD%”CD /D “%~dp0”:————————————–for /f “delims=?” %%a in (‘dir /a /b’) do attrib -a -s -h -r “%%a”pause&gt;nulexit 病毒详情http://sec.sangfor.com.cn/events/230.html]]></content>
+      <tags>
+        <tag>Windows_蠕虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows补丁更新]]></title>
     <url>%2F2019%2F03%2F05%2FWindows%E8%A1%A5%E4%B8%81%E6%9B%B4%E6%96%B0%2F</url>
     <content type="text"><![CDATA[查看补丁在命令行界面键入 systeminfo 命令得到相应的补丁号可以看到没有打上ms17010的补丁。判断主机未打勒索病毒补丁的方式是：是否存在KB40开头的补丁编号。 官网下载补丁这里以ms17010 为例子：访问地址 不同操作系统打不上补丁解决方法部分操作系统在打MS17-010的补丁时，由于未安装对应的补丁的前置补丁导致系统不能够安装漏洞补丁。详细对应版本补丁前置补丁如下图：选择对应的系统版本以windows 7 64位为例，在结果页面选择相应版本的补丁选择 ‘download’ 下载补丁下载补丁后打开补丁安装补丁选择重启生效补丁查看补丁已经安装成功了ms08-067的补丁下载页面也差不多类似，只是下载的界面更为简洁明了 Windows 7 SP1 前置补丁： kb947821 Windows server 2008 r2前置补丁： KB976932 windows server 2012 r2前置补丁： KB3021910 KB2919355 补丁安装的风险因为主机安装补丁后重启才会生效，因此极小概率主机无法正常重启或重启时间较长，而导致影响业务。]]></content>
@@ -62,6 +86,14 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[WannaMine3.0]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
+    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[WannaMine]]></title>
     <url>%2F2019%2F02%2F18%2FWannaMine%2F</url>
     <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
@@ -81,14 +113,6 @@
     <title><![CDATA[WannaMine2.0]]></title>
     <url>%2F2019%2F02%2F18%2FWannaMine2.0%2F</url>
     <content type="text"><![CDATA[病毒现象1.C:\Windows\System32\EnrollCertXaml.dll C:\Windows\SpeechsTracing\ C:\Windows\SpeechsTracing\Microsoft\ 在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、HalPluginsServices.dll、EnrollCertXaml.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情http://www.sohu.com/a/231033783_99990767]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[WannaMine3.0]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
-    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
