@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[kthrotlds(WatchDogs变种)查杀方法]]></title>
+    <url>%2F2019%2F05%2F05%2Fkthrotlds(WatchDogs%E5%8F%98%E7%A7%8D)%E6%9F%A5%E6%9D%80%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[病毒现象 服务器出现卡顿、CPU飙升 以下为WatchDogs的判断方式及其命令：存在恶意进程watchdogs： ps -ef | grep watchdogs存在恶意进程ksoftirqds： ps -ef | grep ksoftirqds存在恶意启动项watchdogs： chkconfig | grep watchdogsps、rm等命令被so劫持： ldd which ps | grep libioset.so恶意的蠕虫下载计划任务： crontab -l | grep pastebin kthrotlds变种后的特征：watchdogs进程变更为kthrotldslibioset.so变更为libcset.sowatchdogs开机启动项名称变更为netdns 病毒处置 删除关键病毒文件： 工具查杀WatchDogs及其变种kthrotlds 使用深信服终端EDR进行查杀 或使用专杀工具查杀(下载链接：https://github.com/MoreSecLab/DDG_MalWare_Clean_Tool/archive/master.zip) 第一步：将压缩包中的busybox放到/bin/目录下； 第二步：将clear_kthrotlds.sh和clear.sh 放到/temp/目录下 第三步：切换到/temp目录下，使用root权限运行： chmod +x clear_kthrotlds.sh &amp;&amp; clear.sh &amp;&amp; ./clear_kthrotlds.sh &amp;&amp; ./clear.sh 病毒详情https://www.anquanke.com/post/id/172111]]></content>
+      <tags>
+        <tag>Linux_挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[驱动隐藏]]></title>
+    <url>%2F2019%2F05%2F05%2F%E9%A9%B1%E5%8A%A8%E9%9A%90%E8%97%8F%2F</url>
+    <content type="text"><![CDATA[病毒现象 黑页文件被隐藏 系统目录存在如下文件:c:\WINDOWS\xlkfs.datc:\WINDOWS\xlkfs.dllc:\WINDOWS\xlkfs.inic:\WINDOWS\system32\drivers\xlkfs.sys 处置 查看被隐藏的文件：记事本打开： c:\WINDOWS\xlkfs.ini 停止服务：net stop xlkfs 删除服务：sc delete xlkfs 4.删除文件：c:\WINDOWS\xlkfs.datc:\WINDOWS\xlkfs.dllc:\WINDOWS\xlkfs.inic:\WINDOWS\system32\drivers\xlkfs.sys]]></content>
+      <tags>
+        <tag>Windows_黑链</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WannaMine4.0查杀方法]]></title>
+    <url>%2F2019%2F05%2F05%2FWannaMine4.0%E6%9F%A5%E6%9D%80%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[病毒现象 扫描爆破内网基于445端口的SMB服务 服务器出现卡顿、蓝屏 服务器主动访问恶意域名：totonm.com、cake.pilutce.com:443 病毒处置 删除关键病毒文件：C:\Windows\System32\rdpkax.xsl （包含所有攻击组件的压缩包）C:\Windows\System32\dllhostex.exe （挖矿主体文件）C:\Windows\System32\ApplicationNetBIOSClient.dllC:\Windows\SysWOW64\ApplicationNetBIOSClient.dllC:\Windows\SysWOW64\dllhostex.exeC:\Windows\NetworkDistribution 2.删除关键恶意服务：恶意服务名为以下三个列表中各选一个，然后进行字符串拼接。字符串列表1为：Windows、Microsoft、Network、Remote、Function、Secure、Application字符串列表2为：Update、Time、NetBIOS、RPC、Protocol、SSDP、UPnP字符串列表3为：Service、Host、Client、Event、Manager、Helper、System(如: ApplicationNetBIOSClient，其由字符串1 Application + 字符串2 NetBIOS + 字符串3 Client 拼接生成。) 3.直接使用工具彻底查杀：使用离线EDR进行查杀(下载链接：http://edr.sangfor.com.cn/tool/SfabAntiBot.zip)同时使用专杀工具查杀(下载链接：http://sec.lz520520.cn:88/data/file/tools/lzAntivirus/wannamine/wannamine&amp;wanncry&amp;powershell.zip) 病毒详情http://www.sangfor.com.cn/about/source-news-company-news/1294.html?tdsourcetag=s_pcqq_aiomsg]]></content>
+      <tags>
+        <tag>Windows_挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[seasame病毒]]></title>
     <url>%2F2019%2F04%2F24%2Fseasame%E7%97%85%E6%AF%92%E5%A4%84%E7%BD%AE%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[病毒现象 无法下载文件及访问网页、无法使用wget和curl命令 服务器出现卡顿 一个CPU占用较高的vmlinuz进程、3个采用7位随机字符拼凑的进程 病毒处置 快照或备份重要数据后，使用root权限执行以下命令：wget http://edr.sangfor.com.cn/tool/clear_seasame.sh &amp;&amp; chmod +x clear_seasame.sh &amp;&amp; ./clear_seasame.sh 也可使用深信服EDR终端杀软进行查杀 病毒详情https://mp.weixin.qq.com/s?__biz=MzI4NjE2NjgxMQ==&amp;mid=2650237699&amp;idx=1&amp;sn=09d4a96932d79ea55ca49fcaa727f8ae&amp;chksm=f3e2d177c4955861fb632a2c06e3dac7ec9ac17e44b6f3728ded9ba72c4183c760674d43f6c0&amp;mpshare=1&amp;scene=1&amp;srcid=0424z3dmDHVltQNfSnpO6U7v&amp;key=906dea2828a54f86cd8b2ed2a9c2d2c7e831beb27ecc24c51538f43101f28a3a382b59f1dd0e37ad285ac88d4f29add5b80307fc35991056d91d3919c8e003351739392b593a2224682c0625d5ec6eed&amp;ascene=1&amp;uin=Njk0NDg5NDM2&amp;devicetype=Windows+10&amp;version=62060739&amp;lang=zh_CN&amp;pass_ticket=gXoLPsIwqk%2FXrA11jATExB%2Bm8llVQukwMM2TbY5LTtnyz6zxZ2yMJ5LrqGl6TDu7]]></content>
@@ -78,25 +102,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[WannaMine]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine%2F</url>
-    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[WannaMine3.0]]></title>
-    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
-    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[基于注册表的poweliks病毒]]></title>
-    <url>%2F2019%2F02%2F18%2F%E5%9F%BA%E4%BA%8E%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%9A%84poweliks%E7%97%85%E6%AF%92%2F</url>
-    <content type="text"><![CDATA[病毒现象主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。 病毒处置 结束进程dllhost.exe 使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认） 病毒详情https://www.freebuf.com/articles/network/169296.html]]></content>
+    <title><![CDATA[Wmixml挖矿病毒]]></title>
+    <url>%2F2019%2F02%2F18%2FWmixml%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
+    <content type="text"><![CDATA[病毒现象安全设备报wmixml挖矿或者主机访问了wmixml矿池地址。 病毒处置1.使用ProcessExplorer等工具找到挖矿的svchost.exe进程删除2.使用autoruns.exe检查开机启动，删掉病毒服务3.使用everything.exe查找appmg.dll、wvms_dp.inf、wmixml.dat文件，存在则删除4.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip5.修补漏洞：如果内网使用了JBoss，请确认好版本并修补相关漏洞6.修改密码：如果主机账号密码比较弱，建议重置高强度的密码 病毒详情https://www.freebuf.com/articles/system/169445.html]]></content>
       <tags>
         <tag>Windows-挖矿</tag>
       </tags>
@@ -110,19 +118,35 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[基于注册表的poweliks病毒]]></title>
+    <url>%2F2019%2F02%2F18%2F%E5%9F%BA%E4%BA%8E%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%9A%84poweliks%E7%97%85%E6%AF%92%2F</url>
+    <content type="text"><![CDATA[病毒现象主机有访问C&amp;C服务器域名，但是主机上无恶意文件，并且存在异常的dllhost.exe进程。 病毒处置 结束进程dllhost.exe 使用PCHunter删除注册表相应的恶意键值，即删除默认键对应的值。（HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\默认） 病毒详情https://www.freebuf.com/articles/network/169296.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WannaMine3.0]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine3.0%2F</url>
+    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MarsTraceDiagnostics.xmlC:\Windows\AppDiagnostics\C:\Windows\System32\TrustedHostex.exe在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、MarsTraceDiagnostics.xml、snmpstorsrv.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/terminal/190093.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WannaMine]]></title>
+    <url>%2F2019%2F02%2F18%2FWannaMine%2F</url>
+    <content type="text"><![CDATA[病毒现象 C:\Windows\System32\MsraReportDataCache32.tlbC:\Windows\SecureBootThemes\C:\Windows\SecureBootThemes\Microsoft\C:\Windows\SecureBootThemes\Crypt\在以上这些目录中存在svchost.exe、spoolsv.exe、svchost.xml、x86.dll/x64.dll、TrueServiceHost.exe、tpmagentservice.dll等文件。 中毒主机对同网段主机有大量445连接。 病毒处置1.使用autoruns.exe删掉病毒主服务srv，检查开机启动项和计划任务项。2.删除上述文件夹中的病毒文件并关闭病毒进程。3.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip4.关闭135，137，139，445网络共享端口5.打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应系统的漏洞补丁https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx 病毒详情https://www.freebuf.com/articles/network/164869.html]]></content>
+      <tags>
+        <tag>Windows-挖矿</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[RDP爆破蠕虫Morto]]></title>
     <url>%2F2019%2F02%2F18%2FRDP%E7%88%86%E7%A0%B4%E8%A0%95%E8%99%ABMorto%2F</url>
     <content type="text"><![CDATA[病毒现象 主机有大量对同网段主机的3389连接。 C:\Windows\offline web pages目录下有cache.txt文件。 病毒处置 删除标记的所有键值，只保留默认的 使用tcpview工具可确定爆破3389的svchost.exe进程，再在任务管理器中结束这个svchost.exe进程 删除C:\Windows\offline web pages\cache.txt 删除成功后重启电脑确认是否还存在该病毒 更改用户登录密码，通过设置高强度密码避免再次被RDP爆破 病毒详情https://www.freebuf.com/news/167365.html]]></content>
       <tags>
         <tag>Windows-蠕虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Wmixml挖矿病毒]]></title>
-    <url>%2F2019%2F02%2F18%2FWmixml%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%2F</url>
-    <content type="text"><![CDATA[病毒现象安全设备报wmixml挖矿或者主机访问了wmixml矿池地址。 病毒处置1.使用ProcessExplorer等工具找到挖矿的svchost.exe进程删除2.使用autoruns.exe检查开机启动，删掉病毒服务3.使用everything.exe查找appmg.dll、wvms_dp.inf、wmixml.dat文件，存在则删除4.使用SfabAntiBot.exe进行全盘查杀。下载地址： http://edr.sangfor.com.cn/tool/SfabAntiBot.zip5.修补漏洞：如果内网使用了JBoss，请确认好版本并修补相关漏洞6.修改密码：如果主机账号密码比较弱，建议重置高强度的密码 病毒详情https://www.freebuf.com/articles/system/169445.html]]></content>
-      <tags>
-        <tag>Windows-挖矿</tag>
       </tags>
   </entry>
   <entry>

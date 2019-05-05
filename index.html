@@ -261,6 +261,403 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/05/05/kthrotlds(WatchDogs变种)查杀方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SF安服团队">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WuKung病毒处置方法">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/05/kthrotlds(WatchDogs变种)查杀方法/" itemprop="url">kthrotlds(WatchDogs变种)查杀方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T10:40:00+08:00">
+                2019-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
+<li><p>服务器出现卡顿、CPU飙升</p>
+</li>
+<li><p>以下为WatchDogs的判断方式及其命令：<br>存在恶意进程watchdogs：   ps -ef | grep watchdogs<br>存在恶意进程ksoftirqds：  ps -ef | grep ksoftirqds<br>存在恶意启动项watchdogs： chkconfig | grep watchdogs<br>ps、rm等命令被so劫持：    ldd <code>which ps</code> | grep libioset.so<br>恶意的蠕虫下载计划任务：  crontab -l | grep pastebin </p>
+</li>
+<li><p>kthrotlds变种后的特征：<br>watchdogs进程变更为kthrotlds<br>libioset.so变更为libcset.so<br>watchdogs开机启动项名称变更为netdns</p>
+</li>
+</ol>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
+<li>删除关键病毒文件： </li>
+</ol>
+<h2 id="工具查杀WatchDogs及其变种kthrotlds"><a href="#工具查杀WatchDogs及其变种kthrotlds" class="headerlink" title="工具查杀WatchDogs及其变种kthrotlds"></a>工具查杀WatchDogs及其变种kthrotlds</h2><ol>
+<li>使用深信服终端EDR进行查杀</li>
+<li>或使用专杀工具查杀(下载链接：<a href="https://github.com/MoreSecLab/DDG_MalWare_Clean_Tool/archive/master.zip" target="_blank" rel="noopener">https://github.com/MoreSecLab/DDG_MalWare_Clean_Tool/archive/master.zip</a>)<br> 第一步：将压缩包中的busybox放到/bin/目录下；<br> 第二步：将clear_kthrotlds.sh和clear.sh 放到/temp/目录下<br> 第三步：切换到/temp目录下，使用root权限运行： chmod +x clear_kthrotlds.sh &amp;&amp; clear.sh &amp;&amp; ./clear_kthrotlds.sh &amp;&amp; ./clear.sh </li>
+</ol>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.anquanke.com/post/id/172111" target="_blank" rel="noopener">https://www.anquanke.com/post/id/172111</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/05/05/驱动隐藏/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SF安服团队">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WuKung病毒处置方法">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/05/驱动隐藏/" itemprop="url">驱动隐藏</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T09:50:00+08:00">
+                2019-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
+<li>黑页文件被隐藏</li>
+<li>系统目录存在如下文件:<br>c:\WINDOWS\xlkfs.dat<br>c:\WINDOWS\xlkfs.dll<br>c:\WINDOWS\xlkfs.ini<br>c:\WINDOWS\system32\drivers\xlkfs.sys</li>
+</ol>
+<h2 id="处置"><a href="#处置" class="headerlink" title="处置"></a>处置</h2><ol>
+<li><p>查看被隐藏的文件：<br>记事本打开： c:\WINDOWS\xlkfs.ini</p>
+</li>
+<li><p>停止服务：<br>net stop xlkfs </p>
+</li>
+<li><p>删除服务：<br>sc delete xlkfs</p>
+</li>
+</ol>
+<p>4.删除文件：<br>c:\WINDOWS\xlkfs.dat<br>c:\WINDOWS\xlkfs.dll<br>c:\WINDOWS\xlkfs.ini<br>c:\WINDOWS\system32\drivers\xlkfs.sys</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://123.com/2019/05/05/WannaMine4.0查杀方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SF安服团队">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WuKung病毒处置方法">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/05/WannaMine4.0查杀方法/" itemprop="url">WannaMine4.0查杀方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T09:21:00+08:00">
+                2019-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
+<li>扫描爆破内网基于445端口的SMB服务</li>
+<li>服务器出现卡顿、蓝屏</li>
+<li>服务器主动访问恶意域名：totonm.com、cake.pilutce.com:443</li>
+</ol>
+<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
+<li>删除关键病毒文件：<br>C:\Windows\System32\rdpkax.xsl    （包含所有攻击组件的压缩包）<br>C:\Windows\System32\dllhostex.exe    （挖矿主体文件）<br>C:\Windows\System32\ApplicationNetBIOSClient.dll<br>C:\Windows\SysWOW64\ApplicationNetBIOSClient.dll<br>C:\Windows\SysWOW64\dllhostex.exe<br>C:\Windows\NetworkDistribution</li>
+</ol>
+<p>2.删除关键恶意服务：<br>恶意服务名为以下三个列表中各选一个，然后进行字符串拼接。<br>字符串列表1为：<br>Windows、Microsoft、Network、Remote、Function、Secure、Application<br>字符串列表2为：<br>Update、Time、NetBIOS、RPC、Protocol、SSDP、UPnP<br>字符串列表3为：<br>Service、Host、Client、Event、Manager、Helper、System<br>(如: ApplicationNetBIOSClient，其由字符串1 Application + 字符串2 NetBIOS + 字符串3 Client 拼接生成。)</p>
+<p>3.直接使用工具彻底查杀：<br>使用离线EDR进行查杀(下载链接：<a href="http://edr.sangfor.com.cn/tool/SfabAntiBot.zip" target="_blank" rel="noopener">http://edr.sangfor.com.cn/tool/SfabAntiBot.zip</a>)<br>同时使用专杀工具查杀(下载链接：<a href="http://sec.lz520520.cn:88/data/file/tools/lzAntivirus/wannamine/wannamine&amp;wanncry&amp;powershell.zip" target="_blank" rel="noopener">http://sec.lz520520.cn:88/data/file/tools/lzAntivirus/wannamine/wannamine&amp;wanncry&amp;powershell.zip</a>)</p>
+<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="http://www.sangfor.com.cn/about/source-news-company-news/1294.html?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">http://www.sangfor.com.cn/about/source-news-company-news/1294.html?tdsourcetag=s_pcqq_aiomsg</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://123.com/2019/04/24/seasame病毒处置方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1195,403 +1592,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/22/PowerGhost/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SF安服团队">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WuKung病毒处置方法">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/22/PowerGhost/" itemprop="url">PowerGhost</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T11:49:13+08:00">
-                2019-02-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>在C:\Windows\Temp目录下生成cohernece.exe文件，以及java-log-xxxx.log文件，存在恶意进程powershell，不断向外进行RDP爆破和ms17-010漏洞利用，并且释放cohernece.exe。导致病毒用杀毒软件杀掉后过一段时间会再次反复生成。还添加了计划任务，连接恶意域名更新病毒。</p>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>使用Tcpview查看链接，定位到恶意的进程powershell，特征：存在异常外连行为，向其他内网主机的445端口（microsoft-ds）或者恶意域名update.7h4uk.com发送连接请求。注意：powershell进程可能不止一个，相同PID为同一进程，确定好恶意的powershell进程并记录PID号。结束掉该进程。</li>
-<li>使用autoruns工具，选择wmi选项卡，删除掉以下两项<br><img src="/2019/02/22/PowerGhost/autoruns_1.png" alt="avatar"></li>
-<li>在logon选项卡中，关闭两个带有winmail.exe的条目。</li>
-<li>在scheduled tasks选项卡中，关闭以下三个条目：<br><img src="/2019/02/22/PowerGhost/autoruns_2.png" alt="avatar"></li>
-<li>结束cohernece.exe进程，并在C:\Windows\Temp目录下删除病毒文件。</li>
-<li>在运行中输入compmgmt.msc，查看计划任务，删除掉如下任务：<br><img src="/2019/02/22/PowerGhost/autoruns_3.png" alt="avatar"></li>
-<li>打ms17-010的补丁，修改服务器密码。</li>
-</ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/network/181441.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/181441.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/20/挖矿病毒BearMiner/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SF安服团队">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WuKung病毒处置方法">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/20/挖矿病毒BearMiner/" itemprop="url">挖矿病毒BearMiner</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-20T03:08:41+08:00">
-                2019-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>服务器存在卡顿现象。</li>
-<li>Setring.exe运行了多个线程进行挖矿，监测到CPU占有率达到75%。</li>
-<li>Setring.exe挖矿文件被释放在C:\Program Files (x86)\Microsoft MSBuild\Setring.exe，特意伪装成为了NVIDIA的文件（NVIDIA显卡市场覆盖极广，其文件一般会被认为是安全的），图标也是英伟达官方图标。</li>
-</ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>C:\Program Files\Microsoft MSBuild\Setring.exe</li>
-<li>C:\Program Files (x86)\Microsoft MSBuild\Setring.exe</li>
-<li>C:\Program Files\Windows Photo\Imaging.exe</li>
-<li>C:\Program Files\Windows Photo\Sadats.dll</li>
-<li>使用了第三方安全设备的用户，也可以通过封堵以下两个URL，进行防护：<a href="http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。" target="_blank" rel="noopener">http://miner.gsbean.com/upload/Sadats.jpg、http://80.255.3.69/upload/Usdata.txt。</a></li>
-</ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="https://www.freebuf.com/articles/terminal/176936.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/terminal/176936.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://123.com/2019/02/20/PowershellMiner无文件挖矿/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SF安服团队">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WuKung病毒处置方法">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/20/PowershellMiner无文件挖矿/" itemprop="url">PowershellMiner无文件挖矿</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-20T02:08:41+08:00">
-                2019-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><ol>
-<li>服务器存在卡顿和外联异常IP等现象。</li>
-<li>存在powershell.exe进程。</li>
-</ol>
-<h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>使用Autoruns工具（微软官网可下），选择WMI，将该WMI启动项删除（该项底部详细栏有“SELECT * FROM __InstanceModificationEvent WITHIN 5600”）。</li>
-<li>打开“任务管理器”，将Powershell宿主进程杀掉即可。</li>
-<li>修补漏洞：打上“永恒之蓝”漏洞补丁，请到微软官网，下载对应的漏洞补丁（<a href="https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx）。" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms17-010.aspx）。</a></li>
-<li>修改密码：如果主机账号密码比较弱，建议重置高强度的密码。</li>
-</ol>
-<h2 id="病毒详情"><a href="#病毒详情" class="headerlink" title="病毒详情"></a>病毒详情</h2><p><a href="http://sec.sangfor.com.cn/events/107.html" target="_blank" rel="noopener">http://sec.sangfor.com.cn/events/107.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1637,7 +1642,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1650,7 +1655,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
