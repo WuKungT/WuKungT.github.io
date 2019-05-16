@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="WuKung病毒处置方法">
 <meta property="og:description" content="病毒现象 服务器出现卡顿、CPU飙升  以下为WatchDogs的判断方式及其命令：存在恶意进程watchdogs：   ps -ef | grep watchdogs存在恶意进程ksoftirqds：  ps -ef | grep ksoftirqds存在恶意启动项watchdogs： chkconfig | grep watchdogsps、rm等命令被so劫持：    ldd which p">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-05T03:07:31.728Z">
+<meta property="og:updated_time" content="2019-05-16T07:15:42.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kthrotlds(WatchDogs变种)查杀方法">
 <meta name="twitter:description" content="病毒现象 服务器出现卡顿、CPU飙升  以下为WatchDogs的判断方式及其命令：存在恶意进程watchdogs：   ps -ef | grep watchdogs存在恶意进程ksoftirqds：  ps -ef | grep ksoftirqds存在恶意启动项watchdogs： chkconfig | grep watchdogsps、rm等命令被so劫持：    ldd which p">
@@ -341,9 +341,6 @@
 </li>
 </ol>
 <h2 id="病毒处置"><a href="#病毒处置" class="headerlink" title="病毒处置"></a>病毒处置</h2><ol>
-<li>删除关键病毒文件： </li>
-</ol>
-<h2 id="工具查杀WatchDogs及其变种kthrotlds"><a href="#工具查杀WatchDogs及其变种kthrotlds" class="headerlink" title="工具查杀WatchDogs及其变种kthrotlds"></a>工具查杀WatchDogs及其变种kthrotlds</h2><ol>
 <li>使用深信服终端EDR进行查杀</li>
 <li>或使用专杀工具查杀(下载链接：<a href="https://github.com/MoreSecLab/DDG_MalWare_Clean_Tool/archive/master.zip" target="_blank" rel="noopener">https://github.com/MoreSecLab/DDG_MalWare_Clean_Tool/archive/master.zip</a>)<br> 第一步：将压缩包中的busybox放到/bin/目录下；<br> 第二步：将clear_kthrotlds.sh和clear.sh 放到/temp/目录下<br> 第三步：切换到/temp目录下，使用root权限运行： chmod +x clear_kthrotlds.sh &amp;&amp; clear.sh &amp;&amp; ./clear_kthrotlds.sh &amp;&amp; ./clear.sh </li>
 </ol>
@@ -387,6 +384,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/16/Powershell无文件挖矿查杀方法/" rel="prev" title="Powershell无文件挖矿查杀方法">
+                Powershell无文件挖矿查杀方法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -463,7 +464,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -509,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒现象"><span class="nav-number">1.</span> <span class="nav-text">病毒现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒处置"><span class="nav-number">2.</span> <span class="nav-text">病毒处置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具查杀WatchDogs及其变种kthrotlds"><span class="nav-number">3.</span> <span class="nav-text">工具查杀WatchDogs及其变种kthrotlds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒详情"><span class="nav-number">4.</span> <span class="nav-text">病毒详情</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒现象"><span class="nav-number">1.</span> <span class="nav-text">病毒现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒处置"><span class="nav-number">2.</span> <span class="nav-text">病毒处置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#病毒详情"><span class="nav-number">3.</span> <span class="nav-text">病毒详情</span></a></li></ol></div>
             
 
           </div>
